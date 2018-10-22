@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 
 const IndexPage = () => (
   <Layout>
-    <div />
+    <div style={{ height: '250vh' }} />
   </Layout>
 )
 

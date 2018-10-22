@@ -1,0 +1,16 @@
+.hidden {
+  display: none;
+}
+
+.hamburger {
+  align-self: center;
+  padding: 8px 5px;
+  border: 1px solid #fff;
+  top: -55px;
+}
+
+@media (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+}

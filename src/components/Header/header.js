@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Logo from './Logo'
-import MenuSearchBundle from './MenuSearchBundle'
-import MobileMenu from './MobileMenu'
+import MenuSearchBundle from './Header/MenuSearchBundle'
+import MobileMenu from './Header/MobileMenu'
 
 import styles from './header.module.css'
 
@@ -11,6 +11,7 @@ class Header extends Component {
     this.handleScroll = this.handleScroll.bind(this)
     this.state = {
       stick: '',
+      mobileMenuOpen: false,
     }
   }
 
@@ -30,7 +31,14 @@ class Header extends Component {
     }
   }
 
+  handleMobileMenu() {
+    this.setState({
+      mobileMenuOpen: !this.state.mobileMenuOpen,
+    })
+  }
+
   render() {
+    const mobileMenuOpen = this.state.mobileMenuOpen
     return (
       <header
         className={`
@@ -46,11 +54,16 @@ class Header extends Component {
               <Logo />
             </div>
             <div className="col-lg-9 col-md-8 col-7 col-sm-8">
-              <MenuSearchBundle />
+              <MenuSearchBundle
+                hamburgerClick={this.handleMobileMenu.bind(this)}
+                mobileOpen={mobileMenuOpen}
+              />
             </div>
-            <div className="mobile-menu-area d-md-block d-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
-              <MobileMenu />
-            </div>
+            {this.state.mobileMenuOpen ? (
+              <div className="mobile-menu-area d-md-block d-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
+                <MobileMenu />
+              </div>
+            ) : null}
           </div>
         </div>
       </header>
