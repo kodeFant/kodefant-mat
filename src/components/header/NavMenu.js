@@ -22,8 +22,8 @@ const pagesSubmenu = [
 ]
 
 const NavMenu = props => (
-  <nav className={props.mobile ? 'mean-nav' : null}>
-    <ul className={props.mobile ? 'menu-overflow' : null}>
+  <nav className={`${props.mobile ? props.styles.mean_nav : null}`}>
+    <ul className={`${props.mobile ? props.styles.menu_overflow : null}`}>
       <MenuItem name="home" link="/" submenu={homeSubmenu} {...props} />
       <MenuItem name="about" link="about" {...props} />
       <MenuItem name="menu" link="menu" {...props} />

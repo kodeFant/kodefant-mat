@@ -27,16 +27,16 @@ class MenuSearchBundle extends Component {
 
   render() {
     return (
-      <div className="menu-search-bundle">
-        <div className="main-menu">
-          <NavMenu />
+      <div className={`${this.props.styles.menu_search_bundle}`}>
+        <div className={`${this.props.styles.main_menu}`}>
+          <NavMenu styles={this.props.styles} />
         </div>
-        <div className="search-wrap">
+        <div className={`${this.props.styles.search_wrap}`}>
           <button className="search-toggle" onClick={this.handleSearchClick}>
             <i className="fa fa-search" />
           </button>
           <div
-            className={`search ${
+            className={`${this.props.styles.search} ${
               this.state.showSearchBar ? '' : styles.hidden
             }`}
           >
@@ -65,6 +65,7 @@ class MenuSearchBundle extends Component {
 MenuSearchBundle.propTypes = {
   hamburgerClick: PropTypes.func,
   mobileOpen: PropTypes.bool,
+  styles: PropTypes.object,
 }
 
 export default MenuSearchBundle

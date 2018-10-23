@@ -52,6 +52,7 @@ const productsData = [
 const popularProduct = () => {
   const params = {
     slidesPerView: 3,
+    speed: 2000,
     spaceBetween: 30,
     loop: true,
     pagination: {
@@ -66,6 +67,10 @@ const popularProduct = () => {
         slidesPerView: 1,
         spaceBetween: 20,
       },
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
     },
   }
 

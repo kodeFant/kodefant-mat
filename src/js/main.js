@@ -1,4 +1,4 @@
-(function($) {
+;(function($) {
   'use strict'
 
   $('.grid').imagesLoaded(function() {
@@ -101,12 +101,6 @@
     $.smoothScroll({
       scrollTarget: link.hash,
     })
-  })
-
-  /* jQuery MeanMenu */
-  $('#mobile-menu-active').meanmenu({
-    meanScreenWidth: '991',
-    meanMenuContainer: '.mobile-menu-area .mobile-menu',
   })
 
   /*----------------------------

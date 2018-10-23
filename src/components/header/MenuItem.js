@@ -25,9 +25,11 @@ class MenuItem extends Component {
     this.setState({ open: !this.state.open })
   }
   render() {
+    // eslint-disable-next-line no-console
+    console.log(this.props)
     const submenu = mapSubmenu(this.props.submenu)
     return (
-      <li className={this.props.mobile ? null : 'top-hover'}>
+      <li className={`${this.props.mobile ? '' : this.props.styles.top_hover}`}>
         <Link to={this.props.link}>
           {this.props.name}{' '}
           {this.props.submenu && !this.props.mobile ? (
@@ -37,12 +39,12 @@ class MenuItem extends Component {
         {this.props.submenu ? (
           <>
             {this.state.open || !this.props.mobile ? (
-              <ul className="submenu">{submenu}</ul>
+              <ul className={`${this.props.styles.submenu}`}>{submenu}</ul>
             ) : null}
             {this.props.mobile ? (
               <a
                 onClick={this.expandButtonHandler.bind(this)}
-                className="mean-expand"
+                className={`${this.props.styles.mean_expand}`}
                 href="#"
                 style={{ fontSize: '18px' }}
               >
@@ -62,6 +64,7 @@ MenuItem.propTypes = {
   submenu: PropTypes.array,
   id: PropTypes.number,
   mobile: PropTypes.bool,
+  styles: PropTypes.object,
 }
 
 export default MenuItem
