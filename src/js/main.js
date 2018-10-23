@@ -1,62 +1,5 @@
-;(function($) {
+(function($) {
   'use strict'
-
-  /* Slider active */
-  $('.slider-active').owlCarousel({
-    loop: true,
-    nav: true,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    navText: [
-      '<i class="fa fa-angle-left"></i>',
-      '<i class="fa fa-angle-right"></i>',
-    ],
-    item: 1,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 1,
-      },
-      1000: {
-        items: 1,
-      },
-    },
-  })
-
-  /* Best selling active */
-  $('.product-slider-active').owlCarousel({
-    loop: true,
-    nav: false,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    navText: [
-      '<i class="ion-ios-arrow-back"></i>',
-      '<i class="ion-ios-arrow-forward"></i>',
-    ],
-    item: 3,
-    margin: 30,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      576: {
-        items: 2,
-      },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 3,
-      },
-      1200: {
-        items: 3,
-      },
-    },
-  })
 
   $('.grid').imagesLoaded(function() {
     // filter items on button click
@@ -147,63 +90,6 @@
         },
       },
     ],
-  })
-
-  /* Brand logo active */
-  $('.brand-logo-active').owlCarousel({
-    loop: true,
-    nav: false,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    item: 5,
-    margin: 50,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      480: {
-        items: 2,
-        margin: 30,
-      },
-      768: {
-        items: 4,
-        margin: 30,
-      },
-      992: {
-        items: 4,
-        margin: 100,
-      },
-      1200: {
-        items: 5,
-      },
-    },
-  })
-
-  /* Brand logo active */
-  $('.blog-active').owlCarousel({
-    loop: true,
-    nav: false,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    item: 3,
-    margin: 30,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      480: {
-        items: 2,
-      },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 3,
-      },
-      1200: {
-        items: 3,
-      },
-    },
   })
 
   /*--

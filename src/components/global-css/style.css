@@ -1886,8 +1886,6 @@ textarea:focus {
 
 /* header */
 
-
-
 .logo {
   padding: 28px 0 0;
   transition: all 0.3s ease 0s;
@@ -2221,72 +2219,6 @@ textarea:focus {
 .slider-content-wrap p {
   font-size: 18px;
   margin: 0 0 40px;
-}
-.slider-active.owl-carousel .owl-nav div {
-  background-color: #e54c2a;
-  border: 1px solid #e54c2a;
-  color: #fff;
-  font-size: 28px;
-  height: 44px;
-  left: 15px;
-  line-height: 40px;
-  opacity: 0;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.3s ease 0s;
-  width: 44px;
-}
-.slider-active.owl-carousel .owl-nav div:hover {
-  background-color: #242424;
-  border: 1px solid #242424;
-}
-.slider-active.owl-carousel .owl-nav div.owl-next {
-  left: auto;
-  right: 15px;
-}
-.slider-area:hover .slider-active.owl-carousel .owl-nav div {
-  opacity: 1;
-}
-
-/* Default Slider Animations */
-
-.owl-item .slider-content * {
-  -webkit-animation-duration: 1.3s;
-  animation-duration: 1.3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-.owl-item.active .slider-animated-1 h2 {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-.owl-item.active .slider-animated-1 h1 {
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-.owl-item.active .slider-animated-1 p {
-  -webkit-animation-delay: 1.9s;
-  animation-delay: 1.9s;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-.owl-item.active .slider-animated-1 a {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-.owl-item.active .slider-content-wrap.slider-animated-1 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
 }
 
 /* about area */

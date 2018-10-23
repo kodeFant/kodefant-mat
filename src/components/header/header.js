@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Logo from './Logo'
-import MenuSearchBundle from './Header/MenuSearchBundle'
-import MobileMenu from './Header/MobileMenu'
+import MenuSearchBundle from './MenuSearchBundle'
+import MobileMenu from './MobileMenu'
 
 import styles from './header.module.css'
 
