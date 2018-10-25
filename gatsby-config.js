@@ -7,8 +7,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'kodefant-restaurant',
+        short_name: 'restaurant',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
@@ -19,4 +19,4 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-eslint',
   ],
-};
+}

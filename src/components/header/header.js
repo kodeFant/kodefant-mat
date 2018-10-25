@@ -38,8 +38,6 @@ class Header extends Component {
   }
 
   render() {
-    // eslint-disable-next-line no-console
-    console.log(styles)
     const mobileMenuOpen = this.state.mobileMenuOpen
     return (
       <header

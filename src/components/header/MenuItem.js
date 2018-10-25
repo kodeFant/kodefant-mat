@@ -25,8 +25,6 @@ class MenuItem extends Component {
     this.setState({ open: !this.state.open })
   }
   render() {
-    // eslint-disable-next-line no-console
-    console.log(this.props)
     const submenu = mapSubmenu(this.props.submenu)
     return (
       <li className={`${this.props.mobile ? '' : this.props.styles.top_hover}`}>

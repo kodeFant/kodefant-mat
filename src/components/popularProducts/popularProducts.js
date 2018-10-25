@@ -10,6 +10,8 @@ import ProductImg4 from '../../images/product/pro-4.jpg'
 import ProductImg5 from '../../images/product/pro-5.jpg'
 import PopularImg from '../../images/banner/popular.png'
 
+import styles from './popularProducts.module.css'
+
 const productsData = [
   {
     id: 1,
@@ -82,14 +84,26 @@ const popularProduct = () => {
           name={product.name}
           description={product.description}
           price={product.price}
+          styles={styles}
         />
       </div>
     )
   })
   return (
-    <div className="popular-product gray-bg pt-100 pb-100">
+    <div
+      className={`
+        ${styles.popular_product}
+        ${styles.gray_bg}
+        ${styles.pt_100}
+        ${styles.pb_100}`}
+    >
       <div className="container">
-        <div className="section-title text-center mb-50">
+        <div
+          className={`
+          ${styles.section_title}
+          text-center
+          ${styles.mb_50}`}
+        >
           <h2>Our Popular Dishes</h2>
           <p>
             {' '}
@@ -98,11 +112,9 @@ const popularProduct = () => {
             ad minim nostrud exercitation ullamco laboris nisi.
           </p>
         </div>
-        <div className="product-slider-active">
-          <Swiper {...params}>{allProducts}</Swiper>
-        </div>
+        <Swiper {...params}>{allProducts}</Swiper>
       </div>
-      <div className="popular-bg-img">
+      <div className={`${styles.popular_bg_img}`}>
         <img alt="" src={PopularImg} />
       </div>
     </div>

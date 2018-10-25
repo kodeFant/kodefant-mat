@@ -1,0 +1,10 @@
+.pt_100 {
+  composes: pt_100 from '../global-css/style.css';
+}
+
+.pb_70 {
+  composes: pt_70 from '../global-css/style.css';
+}
+.gray_bg {
+  composes: gray_bg from '../global-css/style.css';
+}
