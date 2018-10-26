@@ -4,7 +4,8 @@ import Layout from '../components/layout'
 
 import About from '../components/about/about'
 import PopularProducts from '../components/popularProducts/popularProducts'
-import FoodMenu from '../components/foodMenu/foodMenu'
+import BookTable from '../components/bookTable/bookTable'
+import Testimonials from '../components/testimonials/testimonials'
 
 import Slider from '../components/slider/slider'
 /*********************
@@ -39,11 +40,12 @@ const Slides = [
 *********************/
 
 const IndexPage = () => (
-  <Layout>
+  <Layout main={true}>
     <Slider slides={Slides} />
     <About />
     <PopularProducts />
-    <FoodMenu />
+    <BookTable />
+    <Testimonials />
   </Layout>
 )
 

@@ -1,10 +1,132 @@
+.mb_50 {
+  composes: mb_50 from '../global-css/style.css';
+}
+
 .pt_100 {
   composes: pt_100 from '../global-css/style.css';
 }
 
 .pb_70 {
-  composes: pt_70 from '../global-css/style.css';
+  composes: pb_70 from '../global-css/style.css';
 }
 .gray_bg {
   composes: gray_bg from '../global-css/style.css';
+}
+
+.section_title {
+  composes: section_title from '../global-css/style.css';
+}
+
+.single_menu_product_all .single_menu_product {
+  border: medium none;
+}
+
+.single_menu_product_all {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.menu_product_img {
+  flex: 0 0 100px;
+}
+.menu_product_img > img {
+  width: 100%;
+}
+.menu_tab_wrap {
+  text-align: center;
+}
+.menu_tab_list:global.nav.text-center {
+  background-color: #fff;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 20px 30px;
+}
+.menu_tab_list a {
+  color: #242424;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+.menu_tab_list a.active {
+  color: #e54c2a;
+}
+.single_menu_product {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  padding: 15px;
+}
+.menu_product_content {
+  margin-left: 25px;
+  width: 100%;
+}
+.menu_title_price {
+  border-bottom: 1px dashed #cccccc;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 7px;
+  padding: 0 0 10px;
+}
+.menu_title h4 {
+  color: #242424;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+}
+.menu_title h4 a:hover {
+  color: #e54c2a;
+}
+.menu_price span {
+  color: #e54c2a;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+}
+.menu_product_content > p {
+  margin: 0;
+}
+
+.menu_tab_wrap.mb_50 {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .single_menu_product_all {
+    padding: 15px 10px;
+  }
+  .menu_product_content {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu_tab_list a {
+    padding: 0 10px 5px;
+  }
+  .menu_tab_list:global.nav.text-center {
+    padding: 20px 10px 15px;
+  }
+  .single_menu_product {
+    display: block;
+  }
+  .menu_product_img > img {
+    width: auto;
+  }
+  .menu_product_content {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .single_menu_product {
+    display: flex;
+  }
+  .menu_product_content {
+    margin-left: 15px;
+    margin-top: 0;
+  }
 }

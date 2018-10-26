@@ -1,0 +1,195 @@
+/*-----------------------------------------------------------------------------------
+    
+    Template Name: Basmoti - Restaurant Bootstrap4 Template
+    Version: 1.0
+    
+-----------------------------------------------------------------------------------
+    
+    [Table of contents] 
+	
+    1. Template default css
+    2. Index page style
+    3. Home 2 page
+    4. Home 3 page 
+    5. About us page 
+    6. Blog page 
+    7. Blog details
+    8. Contact us
+    
+-----------------------------------------------------------------------------------*/
+
+/*-----------------------------
+    1. Template default css
+-------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Lato:300,400,700,900|Raleway:300,400,500,600,700,800');
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #242424;
+}
+
+.img {
+  max-width: 100%;
+  transition: all 0.3s ease-out 0s;
+}
+
+a,
+.btn {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.btn {
+  border-radius: 0px;
+  font-size: 14px;
+  padding: 0px 15px;
+  height: 30px;
+  line-height: 30px;
+}
+
+a:focus,
+.btn:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: 0px dotted;
+}
+
+a,
+button,
+input {
+  outline: medium none;
+  color: #242424;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  color: #242424;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #242424;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 37px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #242424;
+  margin-bottom: 15px;
+  font-family: 'Lato', sans-serif;
+}
+
+hr {
+  margin: 60px 0;
+  padding: 0px;
+  border-bottom: 1px solid #eceff8;
+  border-top: 0px;
+}
+
+hr.style-2 {
+  border-bottom: 1px dashed #f10;
+}
+
+hr.mp-0 {
+  margin: 0;
+  border-bottom: 1px solid #eceff8;
+}
+
+hr.mtb-40 {
+  margin: 40px 0;
+  border-bottom: 1px solid #eceff8;
+  border-top: 0px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 400;
+  color: #242424;
+}
+
+*::-moz-selection {
+  background: #4fc1f0;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #4fc1f0;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #4fc1f0;
+  color: #fff;
+  text-shadow: none;
+}

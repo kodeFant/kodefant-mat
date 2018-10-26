@@ -1,0 +1,66 @@
+.ptb_95 {
+  composes: ptb_95 from '../global-css/style.css';
+}
+
+.pr_30 {
+  composes: pr_30 from '../global-css/style.css';
+}
+
+.mt_35 {
+  composes: mt_35 from '../global-css/style.css';
+}
+
+.default_btn_style {
+  composes: default_btn_style from '../global-css/style.css';
+}
+
+.about_img > img {
+  width: 100%;
+}
+
+/* about area */
+.about_content > h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  line-height: 45px;
+  margin: 0;
+  text-transform: capitalize;
+}
+.about_content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 5px 0 29px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.about_content h3::before {
+  background-color: #e54c2a;
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 68px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .about_content.pr-30 {
+    padding: 0;
+  }
+  .about_img {
+    margin: 35px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .about_content.pr-30 {
+    padding: 0;
+  }
+  .about_content > h2 {
+    font-size: 31px;
+    line-height: 38px;
+  }
+  .about_img {
+    padding-top: 30px;
+  }
+}

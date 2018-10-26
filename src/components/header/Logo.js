@@ -7,7 +7,11 @@ import PropTypes from 'prop-types'
 const Logo = props => (
   <div className={`${props.styles.logo}`}>
     <Link to="/">
-      <img className={`${props.styles.logo_normal}`} alt="" src={logo} />
+      <img
+        className={`${props.styles.logo_normal}`}
+        alt=""
+        src={props.main ? logo : logoBlack}
+      />
       <img className={`${props.styles.logo_sticky}`} alt="" src={logoBlack} />
     </Link>
   </div>
@@ -15,6 +19,7 @@ const Logo = props => (
 
 Logo.propTypes = {
   styles: PropTypes.object,
+  main: PropTypes.bool,
 }
 
 export default Logo

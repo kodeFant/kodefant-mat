@@ -27,9 +27,6 @@ class foodMenu extends Component {
     this.setState({
       menuFilter: selectedCategory,
     })
-
-    // eslint-disable-next-line no-console
-    console.log(selectedCategory)
   }
 
   filteredFoodMenuItems() {
@@ -43,7 +40,7 @@ class foodMenu extends Component {
 
   activeCategory(category) {
     if (this.state.menuFilter === category) {
-      return 'active'
+      return styles.active
     }
   }
 
@@ -51,16 +48,16 @@ class foodMenu extends Component {
     return this.filteredFoodMenuItems().map(item => {
       return (
         <div key={item.id} className="col-lg-6">
-          <div className="single-menu-product mb-30">
-            <div className="menu-product-img">
+          <div className={`${styles.single_menu_product} ${styles.mb_30}`}>
+            <div className={styles.menu_product_img}>
               <img alt="" src={item.image} />
             </div>
-            <div className="menu-product-content">
-              <div className="menu-title-price">
-                <div className="menu-title">
+            <div className={styles.menu_product_content}>
+              <div className={styles.menu_title_price}>
+                <div className={styles.menu_title}>
                   <h4>{item.name}</h4>
                 </div>
-                <div className="menu-price">
+                <div className={styles.menu_price}>
                   <span>${item.price}</span>
                 </div>
               </div>
@@ -76,7 +73,9 @@ class foodMenu extends Component {
     return (
       <div className={`${styles.pt_100} ${styles.pb_70} ${styles.gray_bg}`}>
         <div className="container">
-          <div className="section-title text-center mb_50">
+          <div
+            className={`${styles.section_title} text-center ${styles.mb_50}`}
+          >
             <h2>Our Food Menu</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -84,15 +83,15 @@ class foodMenu extends Component {
               enim ad minim nostrud exercitation ullamco laboris nisi.
             </p>
           </div>
-          <div className="menu-tab-wrap mb_50">
-            <div className="menu-tab-list nav text-center">
+          <div className={`${styles.menu_tab_wrap} ${styles.mb_50}`}>
+            <div className={`${styles.menu_tab_list} nav text-center`}>
               <a
                 href="#"
                 id="All"
                 className={this.activeCategory('All')}
                 onClick={this.selectMenuCategory}
               >
-                All items
+                All
               </a>
               <a
                 href="#"

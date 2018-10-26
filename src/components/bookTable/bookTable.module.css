@@ -1,0 +1,45 @@
+.book_table {
+  composes: book_table from '../global-css/style.css';
+}
+.ptb_100 {
+  composes: ptb_100 from '../global-css/style.css';
+}
+.bg_img {
+  composes: bg_img from '../global-css/style.css';
+}
+
+.section_title {
+  composes: section_title from '../global-css/style.css';
+}
+
+.mb_50 {
+  composes: mb_50 from '../global-css/style.css';
+}
+
+.reserve_form {
+  composes: reserve_form from '../global-css/style.css';
+}
+
+.reserv_title {
+  composes: reserv_title from '../global-css/style.css';
+}
+
+.reserve_form_top {
+  composes: reserve_form_top from '../global-css/style.css';
+}
+
+.reserve_submit {
+  composes: reserve_submit from '../global-css/style.css';
+}
+
+.mt_40 {
+  composes: mt_40 from '../global-css/style.css';
+}
+
+.book_img {
+  composes: book_img from '../global-css/style.css';
+}
+
+.date_time {
+  composes: date_time from '../global-css/style.css';
+}

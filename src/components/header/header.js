@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
 import Logo from './Logo'
 import MenuSearchBundle from './MenuSearchBundle'
 import MobileMenu from './MobileMenu'
@@ -41,17 +43,26 @@ class Header extends Component {
     const mobileMenuOpen = this.state.mobileMenuOpen
     return (
       <header
-        className={`
+        className={
+          this.props.main
+            ? `
           header-area
           ${styles.transparent_bar}
           ${styles.header_position}
           ${this.state.stick}
-        `}
+        `
+            : `
+        header-area
+        ${styles.transparent_bar}
+        ${styles.header_black}
+        ${this.state.stick}
+      `
+        }
       >
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-4 col-5 col-sm-4">
-              <Logo styles={styles} />
+              <Logo styles={styles} main={this.props.main} />
             </div>
             <div className="col-lg-9 col-md-8 col-7 col-sm-8">
               <MenuSearchBundle
@@ -70,6 +81,10 @@ class Header extends Component {
       </header>
     )
   }
+}
+
+Header.propTypes = {
+  main: PropTypes.bool,
 }
 
 export default Header

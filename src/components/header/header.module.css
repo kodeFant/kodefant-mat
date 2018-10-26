@@ -33,7 +33,6 @@
   z-index: 999;
 }
 .search.active {
-  animation: 0.4s ease 0s normal both 1 running fadeInUp;
   display: block;
   z-index: 99;
 }
@@ -85,14 +84,14 @@
   color: #e54c2a;
 }
 
-.header-black .main-menu ul li a {
+.header_black .main_menu ul li a {
   color: #242424;
   transition: all 0.3s ease 0s;
 }
-.header-black .search-wrap > button {
+.header_black .search-wrap > button {
   color: #242424;
 }
-.header-black .search-wrap:hover > button {
+.header_black .search-wrap:hover > button {
   color: #e54c2a;
 }
 
@@ -107,7 +106,6 @@
 }
 
 .transparent_bar.stick {
-  animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
   background-color: #fff;
   border-bottom: 0 solid #4a90e2;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);

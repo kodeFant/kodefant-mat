@@ -10,16 +10,21 @@ const singleSlide = props => {
   }
   return (
     <div
-      className="single-slider bg-img height-100vh d-flex align-items-center justify-content-center"
+      className={`
+      ${props.styles.bg_img}
+      ${props.styles.height_100vh}
+      d-flex
+      align-items-center
+      justify-content-center`}
       style={{ backgroundImage: `url(${props.background})` }}
       data-swiper-slide-index={props.index}
     >
-      <div className="slider-content pt-100">
-        <div className="slider-content-wrap slider-animated-1">
+      <div className={`${props.styles.slider_content} ${props.styles.pt_100}`}>
+        <div className={props.styles.slider_content_wrap}>
           <h2 className="animated" dangerouslySetInnerHTML={topHeader()} />
           <h1 className="animated" dangerouslySetInnerHTML={bottomHeader()} />
           <p>{props.paragraph}</p>
-          <div className="slider-btn mt-20">
+          <div className={`${props.styles.slider_btn} ${props.styles.mt_20}`}>
             <a className="animated" href="product-details.html">
               {props.buttonText}
             </a>
@@ -37,6 +42,7 @@ singleSlide.propTypes = {
   bottomHeader: PropTypes.string,
   paragraph: PropTypes.string,
   buttonText: PropTypes.string,
+  styles: PropTypes.object,
 }
 
 export default singleSlide

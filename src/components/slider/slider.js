@@ -2,7 +2,8 @@ import React from 'react'
 import Swiper from 'react-id-swiper/lib/custom'
 import SingleSlide from './singleSlide'
 
-import './slider.css'
+import '../global-css/swiper.css'
+import styles from './slider.module.css'
 
 const slider = props => {
   const params = {
@@ -23,6 +24,7 @@ const slider = props => {
         bottomHeader={slide.bottomHeader}
         paragraph={slide.paragraph}
         buttonText={slide.buttonText}
+        styles={styles}
       />
     </div>
   ))
