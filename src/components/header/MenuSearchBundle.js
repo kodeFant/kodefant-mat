@@ -3,7 +3,7 @@ import NavMenu from './NavMenu'
 import { HamburgerButton } from 'react-hamburger-button'
 import PropTypes from 'prop-types'
 
-import styles from './MenuSearchBundle.module.css'
+/* import styles from './MenuSearchBundle.module.css' */
 
 class MenuSearchBundle extends Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class MenuSearchBundle extends Component {
           </button>
           <div
             className={`${this.props.styles.search} ${
-              this.state.showSearchBar ? '' : styles.hidden
+              this.state.showSearchBar ? '' : this.props.styles.hidden
             }`}
           >
             <form action="#">
@@ -46,14 +46,14 @@ class MenuSearchBundle extends Component {
             </form>
           </div>
         </div>
-        <div className={styles.hamburger}>
+        <div className={this.props.styles.hamburger}>
           <HamburgerButton
             open={this.props.mobileOpen}
             onClick={this.props.hamburgerClick}
             width={18}
             height={10}
             strokeWidth={2}
-            color="#fff"
+            color={this.props.stick || !this.props.main ? '#000' : '#fff'}
             animationDuration={0.5}
           />
         </div>
@@ -66,6 +66,8 @@ MenuSearchBundle.propTypes = {
   hamburgerClick: PropTypes.func,
   mobileOpen: PropTypes.bool,
   styles: PropTypes.object,
+  stick: PropTypes.bool,
+  main: PropTypes.bool,
 }
 
 export default MenuSearchBundle

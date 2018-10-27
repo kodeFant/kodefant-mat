@@ -9,6 +9,10 @@
   top: -55px;
 }
 
+.stick .hamburger {
+  border: 1px solid #000;
+}
+
 @media (min-width: 992px) {
   .hamburger {
     display: none;

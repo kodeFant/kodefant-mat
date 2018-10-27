@@ -12,7 +12,7 @@ class Header extends Component {
     super(props)
     this.handleScroll = this.handleScroll.bind(this)
     this.state = {
-      stick: '',
+      stick: false,
       mobileMenuOpen: false,
     }
   }
@@ -26,10 +26,16 @@ class Header extends Component {
   }
 
   handleScroll(event) {
-    if (event.srcElement.scrollingElement.scrollTop < 200) {
-      this.setState({ stick: '' })
-    } else {
-      this.setState({ stick: styles.stick })
+    if (
+      event.srcElement.scrollingElement.scrollTop < 200 &&
+      this.state.stick === true
+    ) {
+      this.setState({ stick: false })
+    } else if (
+      event.srcElement.scrollingElement.scrollTop >= 200 &&
+      this.state.stick === false
+    ) {
+      this.setState({ stick: true })
     }
   }
 
@@ -49,13 +55,13 @@ class Header extends Component {
           header-area
           ${styles.transparent_bar}
           ${styles.header_position}
-          ${this.state.stick}
+          ${this.state.stick ? styles.stick : null}
         `
             : `
         header-area
         ${styles.transparent_bar}
         ${styles.header_black}
-        ${this.state.stick}
+        ${this.state.stick ? styles.stick : null}
       `
         }
       >
@@ -69,6 +75,8 @@ class Header extends Component {
                 hamburgerClick={this.handleMobileMenu.bind(this)}
                 mobileOpen={mobileMenuOpen}
                 styles={styles}
+                stick={this.state.stick}
+                main={this.props.main}
               />
             </div>
             {this.state.mobileMenuOpen ? (
