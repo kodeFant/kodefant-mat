@@ -31,28 +31,41 @@ const footer = () => {
                 <div className={styles.social_icon}>
                   <ul>
                     <li>
-                      <a className={styles.facebook} href="#">
+                      <a
+                        className={styles.facebook}
+                        target="_blank"
+                        href="https://www.facebook.com/kodefant"
+                        rel="noopener noreferrer"
+                      >
                         <i className="ion-social-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a className={styles.twitter} href="#">
+                      <a
+                        className={styles.twitter}
+                        target="_blank"
+                        href="https://www.twitter.com/larsparsfromage"
+                        rel="noopener noreferrer"
+                      >
                         <i className="ion-social-twitter" />
                       </a>
                     </li>
                     <li>
-                      <a className={styles.instagram} href="#">
+                      <a
+                        className={styles.instagram}
+                        href="#"
+                        onClick={e => e.preventDefault()}
+                      >
                         <i className="ion-social-instagram-outline" />
                       </a>
                     </li>
                     <li>
-                      <a className={styles.googleplus} href="#">
+                      <a
+                        className={styles.googleplus}
+                        href="#"
+                        onClick={e => e.preventDefault()}
+                      >
                         <i className="ion-social-googleplus-outline" />
-                      </a>
-                    </li>
-                    <li>
-                      <a className={styles.dribbble} href="#">
-                        <i className="ion-social-dribbble-outline" />
                       </a>
                     </li>
                   </ul>
@@ -144,16 +157,8 @@ const footer = () => {
                     Lorem ipsum dolor sit amet, consecte adipisicing elit, sed
                     do.
                   </p>
-                  <div id="mc_embed_signup" className={styles.subscribe_form}>
-                    <form
-                      id="mc-embedded-subscribe-form"
-                      className="validate"
-                      noValidate=""
-                      target="_blank"
-                      name="mc-embedded-subscribe-form"
-                      method="post"
-                      action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&id=05d85f18ef"
-                    >
+                  <div className={styles.subscribe_form}>
+                    <form className="validate">
                       <div id="mc_embed_signup_scroll" className="mc-form">
                         <input
                           className="email"
@@ -172,11 +177,9 @@ const footer = () => {
                         </div>
                         <div className={styles.clear}>
                           <input
-                            id="mc-embedded-subscribe"
                             className={styles.button}
-                            type="submit"
-                            name="subscribe"
                             value="Subscribe"
+                            type="button"
                           />
                         </div>
                       </div>
