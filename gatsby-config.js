@@ -7,7 +7,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'kodefant-restaurant',
+        name: 'kodeFant - Din restaurant på nett',
         short_name: 'restaurant',
         start_url: '/',
         background_color: '#663399',
