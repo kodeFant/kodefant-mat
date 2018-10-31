@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 const singleSlide = props => {
@@ -12,6 +13,7 @@ const singleSlide = props => {
     <div
       className={`
       ${props.styles.bg_img}
+      ${props.styles.slider_container}
       ${props.styles.height_100vh}
       d-flex
       align-items-center
@@ -25,9 +27,9 @@ const singleSlide = props => {
           <h1 className="animated" dangerouslySetInnerHTML={bottomHeader()} />
           <p>{props.paragraph}</p>
           <div className={`${props.styles.slider_btn} ${props.styles.mt_20}`}>
-            <a className="animated" href="product-details.html">
+            <Link className="animated" to={props.buttonLink}>
               {props.buttonText}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -42,6 +44,7 @@ singleSlide.propTypes = {
   bottomHeader: PropTypes.string,
   paragraph: PropTypes.string,
   buttonText: PropTypes.string,
+  buttonLink: PropTypes.string,
   styles: PropTypes.object,
 }
 

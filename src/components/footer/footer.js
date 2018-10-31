@@ -14,17 +14,16 @@ const footer = () => {
             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
               <div className={`footer-widget ${styles.mb_40}`}>
                 <div className={`${styles.footer_title} ${styles.mb_30}`}>
-                  <h4>About Us</h4>
+                  <h4>Om oss</h4>
                 </div>
                 <div className={styles.footer_about}>
                   <p>
-                    {' '}
-                    Lorem ipsum dolor sit amet, consecte adipisicing elit, sed
-                    do tempor eget loved dost venenatis.
+                    kodeFant er webutvikler og kan gi restauranten din nettsiden
+                    den fortjener.
                   </p>
                   <div className={styles.footer_map}>
-                    <a href="contact.html">
-                      <i className="ion-ios-location-outline" /> View on map
+                    <a href="contact">
+                      <i className="ion-ios-location-outline" /> Vis på kart
                     </a>
                   </div>
                 </div>
@@ -75,7 +74,7 @@ const footer = () => {
             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
               <div className={`footer-widget ${styles.mb_40}`}>
                 <div className={`${styles.footer_title} ${styles.mb_30}`}>
-                  <h4>contact Us</h4>
+                  <h4>Kontakt</h4>
                 </div>
                 <div className={styles.footer_cont_info}>
                   <div className={styles.single_footer_cont_info}>
@@ -83,7 +82,10 @@ const footer = () => {
                       <i className="fa fa-home" />
                     </div>
                     <div className={styles.cont_info_content}>
-                      <p>Elizabeth Tower. 6th Floor Medtown, New York</p>
+                      <p>
+                        Oslo gate 42, <br />
+                        1111 Oslo
+                      </p>
                     </div>
                   </div>
                   <div className={styles.single_footer_cont_info}>
@@ -91,8 +93,7 @@ const footer = () => {
                       <i className="fa fa-phone" />
                     </div>
                     <div className={styles.cont_info_content}>
-                      <p>+088 01673-453290</p>
-                      <p>+088 01673-453290</p>
+                      <p>+47 1234-5678</p>
                     </div>
                   </div>
                   <div className={styles.single_footer_cont_info}>
@@ -101,7 +102,6 @@ const footer = () => {
                     </div>
                     <div className={styles.cont_info_content}>
                       <a href="#">Basmoti@email.com</a>
-                      <a href="#">info@example.com</a>
                     </div>
                   </div>
                 </div>
@@ -109,38 +109,38 @@ const footer = () => {
             </div>
             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
               <div className={`footer-widget ${styles.mb_40}`}>
-                <div className={`footer-title ${styles.mb_30}`}>
-                  <h4>Opening Time</h4>
+                <div className={`${styles.footer_title} ${styles.mb_30}`}>
+                  <h4>Åpningstider</h4>
                 </div>
                 <div className={`${styles.open_time} ${styles.pr_30}`}>
                   <ul>
                     <li>
-                      Saturday
-                      <span>9am - 11pm</span>
+                      Lørdag
+                      <span>Stengt</span>
                     </li>
                     <li>
-                      Sunday
-                      <span>Close</span>
+                      Søndag
+                      <span>Stengt</span>
                     </li>
                     <li>
-                      Monday
-                      <span>9am - 11pm</span>
+                      Mandag
+                      <span>19:00 - 01:00</span>
                     </li>
                     <li>
-                      Tuesday
-                      <span>9am - 11pm</span>
+                      Tirsdag
+                      <span>19:00 - 01:00</span>
                     </li>
                     <li>
-                      Wednesday
-                      <span>9am - 11pm</span>
+                      Onsdag
+                      <span>19:00 - 01:00</span>
                     </li>
                     <li>
-                      Thursday
-                      <span>9am - 11pm</span>
+                      Torsdag
+                      <span>19:00 - 01:00</span>
                     </li>
                     <li>
-                      Friday
-                      <span>9am - 11pm</span>
+                      Fredag
+                      <span>19:00 - 01:00</span>
                     </li>
                   </ul>
                 </div>
@@ -148,14 +148,13 @@ const footer = () => {
             </div>
             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
               <div className={`footer-widget ${styles.mb_40}`}>
-                <div className={`footer-title ${styles.mb_30}`}>
-                  <h4>Newsletter</h4>
+                <div className={`${styles.footer_title} ${styles.mb_30}`}>
+                  <h4>Nyhetsbrev</h4>
                 </div>
                 <div className={styles.newsletter_style}>
                   <p>
-                    {' '}
-                    Lorem ipsum dolor sit amet, consecte adipisicing elit, sed
-                    do.
+                    Om du ønsker, kan du sette opp et nyhetsbrev for kundene
+                    dine med spesialtilbud.
                   </p>
                   <div className={styles.subscribe_form}>
                     <form className="validate">
@@ -164,7 +163,7 @@ const footer = () => {
                           className="email"
                           type="email"
                           required=""
-                          placeholder="Enter your email"
+                          placeholder="Din epost-adresse"
                           name="EMAIL"
                         />
                         <div className="mc-news" aria-hidden="true">
@@ -199,7 +198,8 @@ const footer = () => {
         <div className="container">
           <div className={`${styles.copyright} text-center`}>
             <p>
-              Copyright © <a href="#">Basmoti</a>. All Right Reserved.
+              2018 © <a href="https://www.kodefant.no">Lars Lillo Ulvestad</a>.
+              Alle rettigheter.
             </p>
           </div>
         </div>

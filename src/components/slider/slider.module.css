@@ -8,10 +8,50 @@
 
 .pt_100 {
   composes: pt_100 from '../global-css/style.css';
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .mt_20 {
   composes: mt_20 from '../global-css/style.css';
+}
+
+.slidernav_button {
+  background-color: #e54c2a;
+  border: 1px solid #e54c2a;
+  color: #fff;
+  font-size: 28px;
+  height: 44px;
+
+  line-height: 40px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
+  width: 44px;
+  z-index: 5;
+}
+
+body:hover > .swiper_button_next {
+  opacity: 0;
+  z-index: 5;
+}
+
+.swiper_button_next {
+  composes: slidernav_button;
+  left: 15px;
+}
+
+.swiper_button_prev {
+  composes: slidernav_button;
+  right: 15px;
 }
 
 /* slider style */

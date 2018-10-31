@@ -24,6 +24,7 @@ const slider = props => {
         bottomHeader={slide.bottomHeader}
         paragraph={slide.paragraph}
         buttonText={slide.buttonText}
+        buttonLink={slide.buttonLink}
         styles={styles}
       />
     </div>

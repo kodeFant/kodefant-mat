@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.search_wrap>button {
+.search_wrap > button {
   background: transparent none repeat scroll 0 0;
   border: medium none;
   color: #fff;
@@ -86,13 +86,13 @@
   background: #242424 none repeat scroll 0 0;
 }
 
-.stick .search_wrap>button {
+.stick .search_wrap > button {
   line-height: 68px;
   padding: 0;
   color: #333;
 }
 
-.search_wrap:hover>button {
+.search_wrap:hover > button {
   color: #e54c2a;
 }
 
@@ -101,11 +101,11 @@
   transition: all 0.3s ease 0s;
 }
 
-.header_black .search_wrap>button {
+.header_black .search_wrap > button {
   color: #242424;
 }
 
-.header_black .search_wrap:hover>button {
+.header_black .search_wrap:hover > button {
   color: #e54c2a;
 }
 
@@ -157,8 +157,6 @@
   border: 1px solid #000;
 }
 
-
-
 /* start main menu */
 
 .main_menu ul li {
@@ -168,7 +166,7 @@
   position: relative;
 }
 
-.main_menu nav>ul>li:last-child {
+.main_menu nav > ul > li:last-child {
   padding-right: 0px;
 }
 
@@ -193,12 +191,12 @@
   top: -2px;
 }
 
-.main_menu ul li:hover>a,
-.header_black .main_menu ul li:hover>a {
+.main_menu ul li:hover > a,
+.header_black .main_menu ul li:hover > a {
   color: #e54c2a;
 }
 
-.main_menu nav>ul>li>ul.submenu {
+.main_menu nav > ul > li > ul.submenu {
   background: #fff none repeat scroll 0 0;
   box-shadow: 0 0 7px 0.5px rgba(0, 0, 0, 0.15);
   display: block;
@@ -214,17 +212,17 @@
   z-index: 999;
 }
 
-.main_menu nav>ul>li:hover>ul.submenu {
+.main_menu nav > ul > li:hover > ul.submenu {
   transform: rotateX(0deg);
   visibility: visible;
 }
 
-.main_menu nav>ul>li>ul.mega-menu>li ul li {
+.main_menu nav > ul > li > ul.mega-menu > li ul li {
   display: block;
   padding: 0px;
 }
 
-.main_menu nav>ul>li>ul>li {
+.main_menu nav > ul > li > ul > li {
   display: block;
   padding: 0 20px;
 }
@@ -235,11 +233,11 @@
   text-transform: uppercase;
 }
 
-.main_menu ul li.top_hover ul li ul li.mega-menu-title:hover>a::before {
+.main_menu ul li.top_hover ul li ul li.mega-menu-title:hover > a::before {
   display: none;
 }
 
-.main_menu ul li.top_hover ul li ul li.mega-menu-title:hover>a {
+.main_menu ul li.top_hover ul li ul li.mega-menu-title:hover > a {
   padding-left: 0px;
 }
 
@@ -254,7 +252,7 @@
   padding-top: 0px;
 }
 
-.main_menu ul li.top_hover ul li>a::before {
+.main_menu ul li.top_hover ul li > a::before {
   background: #e54c2a none repeat scroll 0 0;
   border-radius: 50%;
   content: '';
@@ -268,15 +266,15 @@
   z-index: 999;
 }
 
-.main_menu ul li.top_hover ul.mega-menu li>a::before {
+.main_menu ul li.top_hover ul.mega-menu li > a::before {
   left: 0px;
 }
 
-.main_menu ul li.top_hover ul li:hover>a::before {
+.main_menu ul li.top_hover ul li:hover > a::before {
   opacity: 1;
 }
 
-.main_menu ul li.top_hover ul li:hover>a {
+.main_menu ul li.top_hover ul li:hover > a {
   padding-left: 12px;
 }
 
@@ -284,7 +282,7 @@
   position: static;
 }
 
-.main_menu nav>ul>li>ul.mega-menu {
+.main_menu nav > ul > li > ul.mega-menu {
   background-color: #fff;
   display: block;
   left: 0;
@@ -301,19 +299,19 @@
   box-shadow: 0 1px 7px -2px rgba(0, 0, 0, 0.3);
 }
 
-.main_menu nav>ul>li:hover>ul.mega-menu {
+.main_menu nav > ul > li:hover > ul.mega-menu {
   transform: rotateX(0deg);
   visibility: visible;
 }
 
-.main_menu nav>ul>li>ul.mega-menu>li {
+.main_menu nav > ul > li > ul.mega-menu > li {
   float: left;
   padding-left: 60px;
   padding-right: 0;
   width: 25%;
 }
 
-.main_menu nav>ul>li>ul.mega-menu>li:last-child {
+.main_menu nav > ul > li > ul.mega-menu > li:last-child {
   padding-right: 0px;
 }
 
@@ -576,7 +574,7 @@ a.meanmenu_reveal {
     padding: 18px 0 18px;
   }
 
-  .search_wrap>button {
+  .search_wrap > button {
     line-height: 77px;
     padding: 0;
   }
@@ -602,14 +600,14 @@ a.meanmenu_reveal {
   }
 
   .search_wrap {
-    margin: 0 50px 0 0;
+    margin: 0 25px 0 0;
   }
 
   .logo {
     padding: 18px 0 18px;
   }
 
-  .search_wrap>button {
+  .search_wrap > button {
     line-height: 77px;
     padding: 0;
   }
@@ -620,5 +618,10 @@ a.meanmenu_reveal {
 
   .stick .mean_container a.meanmenu_reveal {
     top: -48px;
+  }
+
+  .search {
+    min-width: 270px;
+    right: -35px;
   }
 }

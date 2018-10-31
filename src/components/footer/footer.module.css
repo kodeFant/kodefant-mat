@@ -30,6 +30,10 @@
   composes: pt_25 from '../global-css/style.css';
 }
 
+.pr_30 {
+  composes: pr_30 from '../global-css/style.css';
+}
+
 .button {
   composes: button from '../global-css/style.css';
 }
@@ -145,7 +149,7 @@
   color: #fff;
   margin: 0;
 }
-.cont-info-icon i {
+.cont_info_icon i {
   color: #fff;
   font-size: 18px;
 }

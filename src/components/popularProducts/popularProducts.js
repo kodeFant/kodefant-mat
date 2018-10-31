@@ -16,37 +16,37 @@ const productsData = [
   {
     id: 1,
     image: ProductImg1,
-    name: 'Oldtimer with Cheese',
-    description: 'Chicken meat which is breaded or battered, then deep.',
+    name: 'Fritert aubergine',
+    description: 'Må prøves! Husets mest solgte favoritt.',
     price: 100,
   },
   {
     id: 2,
     image: ProductImg2,
-    name: 'Black Bean Fajitas',
-    description: 'Chicken meat which is breaded or battered, then deep.',
+    name: 'Pizza Terra',
+    description: 'Sprø bunn og sesongens grønnsaker.',
     price: 200,
   },
   {
     id: 3,
     image: ProductImg3,
-    name: 'Chicken Nugget',
-    description: 'Chicken meat which is breaded or battered, then deep.',
+    name: 'Bønnerburger',
+    description:
+      'Fritystekt bønneburger med friske grønnsaker og himmelsk dressing.',
     price: 300,
   },
   {
     id: 4,
     image: ProductImg4,
-    name: 'Match Fajita Trio',
-    description: 'Chicken meat which is breaded or battered, then deep.',
+    name: 'Fylt portobello',
+    description: 'Ovnstekt sopp med delikat fyll.',
     price: 150,
   },
   {
     id: 5,
     image: ProductImg5,
-    name: 'Match Fajita Trio',
-    description:
-      'Chicken meat which is breaded or battered, then deep-fried or baked.',
+    name: 'Nuddelbolle',
+    description: 'Kokte risnudler med stekte grønnsaker.',
     price: 50,
   },
 ]
@@ -104,12 +104,10 @@ const popularProduct = () => {
           text-center
           ${styles.mb_50}`}
         >
-          <h2>Our Popular Dishes</h2>
+          <h2>Populære retter</h2>
           <p>
-            {' '}
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim nostrud exercitation ullamco laboris nisi.
+            Vis at spisestedet ditt har god mat. Frist med bilder av dine mest
+            solgte retter.
           </p>
         </div>
         <Swiper {...params}>{allProducts}</Swiper>

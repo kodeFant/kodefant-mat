@@ -8,7 +8,7 @@ const popularProductCard = props => (
     <div className={`${styles.product_content} text-center`}>
       <h4>{props.name}</h4>
       <p>{props.description}</p>
-      <span>${props.price.toFixed(2)}</span>
+      <span>Kr {props.price.toFixed(2)}</span>
     </div>
   </div>
 )

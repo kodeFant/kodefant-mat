@@ -9,8 +9,8 @@ const About = () => (
       <div className="row d-flex align-items-center">
         <div className="col-lg-6">
           <div className={`${styles.about_content} ${styles.pr_30}`}>
-            <h2>About Basmoti Restaurant </h2>
-            <h3> Basmoti ensures healthy environment. Make a short trip. </h3>
+            <h2>Om din restaurant</h2>
+            <h3>Hva gjør restauranten din spesiell? Beskriv dine verdier.</h3>
             <div>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -23,9 +23,6 @@ const About = () => (
                 aliquet dolor libero, eget loved dost venenatis mauris finibus
                 dictum.
               </p>
-              <div className={`${styles.default_btn_style} ${styles.mt_35}`}>
-                <a href="#">read more</a>
-              </div>
             </div>
           </div>
         </div>

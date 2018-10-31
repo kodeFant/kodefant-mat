@@ -1,0 +1,110 @@
+.pt_100 {
+  composes: pt_100 from '../global-css/style.css';
+}
+
+.pb_70 {
+  composes: pb_70 from '../global-css/style.css';
+}
+
+.gray_bg {
+  composes: gray_bg from '../global-css/style.css';
+}
+
+.mb_30 {
+  composes: mb_30 from '../global-css/style.css';
+}
+
+.mb_50 {
+  composes: mb_50 from '../global-css/style.css';
+}
+
+.section_title {
+  composes: section_title from '../global-css/style.css';
+}
+
+/* team area */
+
+.team_img_icon > img {
+  width: 100%;
+}
+.single_team {
+  box-shadow: 0 3px 5px rgba(85, 85, 85, 0.2);
+  position: relative;
+}
+.team_social_icon {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  padding: 12px 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  transition: all 0.5s ease 0s;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+  transform: scaleY(0);
+}
+.single_team:hover .team_social_icon {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.team_social_icon ul li {
+  display: inline-block;
+  margin: 0 6px;
+  list-style: none;
+}
+.team_social_icon li a {
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  height: 38px;
+  line-height: 36px;
+  text-align: center;
+  width: 38px;
+}
+.team_social_icon li a.facebook {
+  background-color: #3c5b9b;
+  border: 2px solid #3c5b9b;
+}
+.team_social_icon li a.twitter {
+  background-color: #40c1df;
+  border: 2px solid #40c1df;
+}
+.team_social_icon li a.instagram {
+  background-color: #c619b8;
+  border: 2px solid #c619b8;
+}
+.team_social_icon li a.facebook:hover {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #3c5b9b;
+}
+.team_social_icon li a.twitter:hover {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #40c1df;
+}
+.team_social_icon li a.instagram:hover {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #c619b8;
+}
+.team_info {
+  padding: 20px 10px;
+}
+.team_info > h3 {
+  color: #242424;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+}
+.team_info > span {
+  color: #242424;
+  font-weight: 500;
+}
+.team_img_icon {
+  overflow: hidden;
+  position: relative;
+}

@@ -56,13 +56,13 @@ class Header extends Component {
           ${styles.transparent_bar}
           ${styles.header_position}
           ${this.state.stick ? styles.stick : null}
-        `
+            `
             : `
         header-area
         ${styles.transparent_bar}
         ${styles.header_black}
         ${this.state.stick ? styles.stick : null}
-      `
+            `
         }
       >
         <div className="container">

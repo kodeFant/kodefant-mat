@@ -10,6 +10,8 @@ import foodMenuData, {
 
 import styles from './foodMenu.module.css'
 
+import stripesTexture from '../../images/textures/stripes-light.png'
+
 class foodMenu extends Component {
   constructor(props) {
     super(props)
@@ -71,7 +73,12 @@ class foodMenu extends Component {
 
   render() {
     return (
-      <div className={`${styles.pt_100} ${styles.pb_70} ${styles.gray_bg}`}>
+      <div
+        className={`${styles.pt_100} ${styles.pb_70} ${styles.gray_bg}`}
+        style={{
+          backgroundImage: `url(${stripesTexture})`,
+        }}
+      >
         <div className="container">
           <div
             className={`${styles.section_title} text-center ${styles.mb_50}`}

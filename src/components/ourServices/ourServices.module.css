@@ -1,0 +1,54 @@
+.pt_100 {
+  composes: pt_100 from '../global-css/style.css';
+}
+
+.pb_70 {
+  composes: pb_70 from '../global-css/style.css';
+}
+
+.section_title {
+  composes: section_title from '../global-css/style.css';
+}
+
+.mb_50 {
+  composes: mb_50 from '../global-css/style.css';
+}
+
+.mb_30 {
+  composes: mb_30 from '../global-css/style.css';
+}
+
+.section-title {
+  composes: section_title from '../global-css/style.css';
+}
+
+.single_service {
+  transition: all 0.5s ease 0s;
+}
+.single_service i {
+  font-size: 35px;
+  color: #e54c2a;
+  transition: all 0.3s ease 0s;
+}
+.single_service:hover i {
+  color: #242424;
+}
+.single_service:hover {
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  border: none;
+}
+.single_service > h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+.single_service {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 45px 40px;
+}
+
+.single_service > p {
+  margin: 0;
+}
