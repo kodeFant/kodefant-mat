@@ -13,7 +13,7 @@ const singleSlide = props => {
     <div
       className={`
       ${props.styles.bg_img}
-      ${props.styles.slider_container}
+      ${props.styles.single_slider}
       ${props.styles.height_100vh}
       d-flex
       align-items-center
@@ -22,7 +22,11 @@ const singleSlide = props => {
       data-swiper-slide-index={props.index}
     >
       <div className={`${props.styles.slider_content} ${props.styles.pt_100}`}>
-        <div className={props.styles.slider_content_wrap}>
+        <div
+          className={`${props.styles.slider_content_wrap} ${
+            props.styles.slider_animated_1
+          }`}
+        >
           <h2 className="animated" dangerouslySetInnerHTML={topHeader()} />
           <h1 className="animated" dangerouslySetInnerHTML={bottomHeader()} />
           <p>{props.paragraph}</p>

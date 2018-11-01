@@ -3127,3 +3127,31 @@ blockquote > h4 {
     margin: 0;
   }
 }
+
+.swiper_button_next,
+.swiper_button_prev {
+  background-color: #e54c2a;
+  border: 1px solid #e54c2a;
+  color: #fff;
+  font-size: 28px;
+  height: 44px;
+
+  line-height: 40px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+
+  transition: all 0.3s ease 0s;
+  width: 44px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper_button_next {
+  left: 15px;
+}
+
+.swiper_button_prev {
+  right: 15px;
+}

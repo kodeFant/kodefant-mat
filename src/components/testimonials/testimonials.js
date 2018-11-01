@@ -5,6 +5,8 @@ import styles from './testimonials.module.css'
 
 import testimonialImage1 from '../../images/team/tesi-1.png'
 import testimonialImage2 from '../../images/team/tesi-2.png'
+import testimonialImage3 from '../../images/team/tesi-3.png'
+import testimonialImage4 from '../../images/team/tesi-4.png'
 
 class Testimonials extends Component {
   constructor(props) {
@@ -58,6 +60,7 @@ class Testimonials extends Component {
         },
         420: {
           slidesPerView: 1,
+          loop: false,
         },
       },
     }
@@ -70,6 +73,12 @@ class Testimonials extends Component {
       touchRatio: 0.2,
       slideToClickedSlide: false,
       loop: true,
+      breakpoints: {
+        420: {
+          slidesPerView: 1,
+          loop: false,
+        },
+      },
     }
     return (
       <div className={`testimonial-area ${styles.ptb_100} gray-bg`}>
@@ -77,12 +86,10 @@ class Testimonials extends Component {
           <div
             className={`${styles.section_title} text-center ${styles.mb_50}`}
           >
-            <h2>what people say</h2>
+            <h2>Gode anmeldelser</h2>
             <p>
-              {' '}
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim nostrud exercitation ullamco laboris nisi.
+              Har du fått gode tilbakemeldinger? La andre få vite om dem.
+              Restaurantkunder spiser ofte der andre har hatt gode opplevelser.
             </p>
           </div>
           <div className="row">
@@ -91,26 +98,27 @@ class Testimonials extends Component {
                 <Swiper {...gallerySwiperParams} ref={this.galleryRef}>
                   <div className={styles.single_testi_text}>
                     <p>
-                      The point of using Lorem Ipsum is that more-or-less normal
-                      distribution of letters, as opposed to using
+                      Den friterte auberginen er så god! Ord kan ikke beskrive
+                      den. Må prøves av alle!
                     </p>
                   </div>
                   <div className={styles.single_testi_text}>
                     <p>
-                      The point of using Lorem Ipsum is that more-or-less normal
-                      distribution of letters, as opposed to using
+                      Alltid en positiv opplevelse på Din restaurant. Rent, pent
+                      og hyggelig personale.
                     </p>
                   </div>
                   <div className={styles.single_testi_text}>
                     <p>
-                      The point of using Lorem Ipsum is that more-or-less normal
-                      distribution of letters, as opposed to using
+                      Tusen takk for en fantastisk bursdagsfeiring hos dere.
+                      Banansplitt med stjerneskudd ga bursdagsbarnet en unik
+                      kveld :)
                     </p>
                   </div>
                   <div className={styles.single_testi_text}>
                     <p>
-                      The point of using Lorem Ipsum is that more-or-less normal
-                      distribution of letters, as opposed to using
+                      Servitøren var tålmodig og ga meg gode anbefalinger. Maten
+                      var fantastisk. Jeg kommer garantert igjen.
                     </p>
                   </div>
                 </Swiper>
@@ -120,22 +128,22 @@ class Testimonials extends Component {
                   <div className={styles.single_testi_img}>
                     <img src={testimonialImage1} alt="testi 1" />
                     <h3>William Patel</h3>
-                    <h5>customer</h5>
+                    <h5>Fornøyd kunde</h5>
                   </div>
                   <div className={styles.single_testi_img}>
                     <img src={testimonialImage2} alt="testi 1" />
                     <h3>Diane Walsh</h3>
-                    <h5>customer</h5>
+                    <h5>Fornøyd kunde</h5>
                   </div>
                   <div className={styles.single_testi_img}>
-                    <img src={testimonialImage1} alt="testi 1" />
+                    <img src={testimonialImage3} alt="testi 1" />
                     <h3>Carl Carr</h3>
-                    <h5>customer</h5>
+                    <h5>Fornøyd kunde</h5>
                   </div>
                   <div className={styles.single_testi_img}>
-                    <img src={testimonialImage2} alt="testi 1" />
+                    <img src={testimonialImage4} alt="testi 1" />
                     <h3>Linda Nelson</h3>
-                    <h5>customer</h5>
+                    <h5>Fornøyd kunde</h5>
                   </div>
                 </Swiper>
               </div>

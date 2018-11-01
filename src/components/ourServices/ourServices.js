@@ -6,24 +6,21 @@ import SingleService from './singleService'
 const data = [
   {
     id: 1,
-    title: '100% healthy food',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.',
+    title: 'Kortreist mat',
+    text: 'De fleste av våre råvarer kommer fra norske gårder i nærområdet.',
     iconClasses: 'fa fa-cutlery',
   },
   {
     id: 2,
-    title: 'Our Services',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.',
-    iconClasses: 'fa fa-cogs',
+    title: 'Minsker matsvinn',
+    text: 'Overskuddsmat går til Kirkens bymisjon.',
+    iconClasses: 'fa fa-heart-o',
   },
   {
     id: 3,
-    title: 'healthy environment',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.',
-    iconClasses: 'fa fa-heart-o',
+    title: 'Gir tilbake',
+    text: 'Vi gir én prosent av vårt overskudd til lokale idrettslag.',
+    iconClasses: 'fa fa-cogs',
   },
 ]
 
@@ -31,11 +28,10 @@ const ourServices = () => (
   <div className={`${styles.pt_100} ${styles.pb_70}`}>
     <div className="container">
       <div className={`${styles.section_title} text-center ${styles.mb_50}`}>
-        <h2>Our Services</h2>
+        <h2>Dine tjenester</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim nostrud exercitation ullamco laboris nisi.
+          Hva skiller deg fra konkurrentene? Hvorfor vil noen velge deg? Trekk
+          fram tre punkter som gjør at folk bør velge å spise hos deg.
         </p>
       </div>
       <div className="row">

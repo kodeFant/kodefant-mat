@@ -101,7 +101,7 @@ const footer = () => {
                       <i className="fa fa-envelope" />
                     </div>
                     <div className={styles.cont_info_content}>
-                      <a href="#">Basmoti@email.com</a>
+                      <a href="#">dinrestaurant@kodefant.no</a>
                     </div>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ const footer = () => {
                         <div className={styles.clear}>
                           <input
                             className={styles.button}
-                            value="Subscribe"
+                            value="Abonnér"
                             type="button"
                           />
                         </div>

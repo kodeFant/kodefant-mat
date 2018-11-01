@@ -106,8 +106,8 @@ const popularProduct = () => {
         >
           <h2>Populære retter</h2>
           <p>
-            Vis at spisestedet ditt har god mat. Frist med bilder av dine mest
-            solgte retter.
+            Få inn flere bestillinger på de rettene du allerede selger mye av.
+            Fremhev dine mest solgte retter.
           </p>
         </div>
         <Swiper {...params}>{allProducts}</Swiper>

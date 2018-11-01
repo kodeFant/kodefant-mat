@@ -83,11 +83,11 @@ class foodMenu extends Component {
           <div
             className={`${styles.section_title} text-center ${styles.mb_50}`}
           >
-            <h2>Our Food Menu</h2>
+            <h2>Din meny</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim nostrud exercitation ullamco laboris nisi.
+              Det er behagelig for kunden å vite på forhånd hva en kan forvente
+              hos deg. Merk med allergener. Merk også gjerne om maten er vegansk
+              eller vegetarisk. Det gjør det enkelt for mange å velge deg.
             </p>
           </div>
           <div className={`${styles.menu_tab_wrap} ${styles.mb_50}`}>
@@ -98,7 +98,7 @@ class foodMenu extends Component {
                 className={this.activeCategory('All')}
                 onClick={this.selectMenuCategory}
               >
-                All
+                Alle
               </a>
               <a
                 href="#"
@@ -106,7 +106,7 @@ class foodMenu extends Component {
                 onClick={this.selectMenuCategory}
                 className={this.activeCategory(breakfast)}
               >
-                breakfast
+                Frokost
               </a>
               <a
                 href="#"
@@ -114,7 +114,7 @@ class foodMenu extends Component {
                 onClick={this.selectMenuCategory}
                 className={this.activeCategory(lunch)}
               >
-                lunch
+                Lunsj
               </a>
               <a
                 href="#"
@@ -122,7 +122,7 @@ class foodMenu extends Component {
                 onClick={this.selectMenuCategory}
                 className={this.activeCategory(dinner)}
               >
-                dinner
+                Middag
               </a>
               <a
                 href="#"
@@ -130,7 +130,7 @@ class foodMenu extends Component {
                 onClick={this.selectMenuCategory}
                 className={this.activeCategory(dessert)}
               >
-                dessert
+                Dessert
               </a>
               <a
                 href="#"
@@ -138,7 +138,7 @@ class foodMenu extends Component {
                 onClick={this.selectMenuCategory}
                 className={this.activeCategory(drinks)}
               >
-                drinks
+                Drikke
               </a>
             </div>
           </div>

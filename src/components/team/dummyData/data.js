@@ -7,25 +7,25 @@ export const data = [
   {
     id: 1,
     image: teamMember1,
-    name: 'Diane Walsh',
-    title: 'Special cook',
+    name: 'Harald Bull',
+    title: 'Kokkelærling',
   },
   {
     id: 2,
     image: teamMember2,
-    name: 'Doris Perez',
-    title: 'Chef cook',
+    name: 'Lene Utvik',
+    title: 'Spesialkokk',
   },
   {
     id: 3,
     image: teamMember3,
-    name: 'Joan Greene',
-    title: 'Junior cook',
+    name: 'Kim Hansen',
+    title: 'Kjøkkensjef',
   },
   {
     id: 4,
     image: teamMember4,
-    name: 'Frank Green',
-    title: 'Special cook',
+    name: 'Tom Danielsen',
+    title: 'Konditor',
   },
 ]

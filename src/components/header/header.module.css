@@ -8,11 +8,13 @@
 .menu_search_bundle {
   display: flex;
   float: right;
+  height: 100%;
 }
 
 .search_wrap {
   margin: 0 0 0 50px;
   position: relative;
+  display: none;
 }
 
 .search_wrap > button {

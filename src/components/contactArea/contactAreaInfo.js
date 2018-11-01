@@ -7,7 +7,7 @@ const contactAreaInfo = props => (
       Kontakt
     </h4>
     <p>
-      La kundene stille deg spørsmål på epost og gjør det lett for dem å finne
+      Gjør deg selv tilgjengelig for kunden og gjør det lett for dem å finne
       restauranten din.
     </p>
     <div className={props.styles.contact_info_wrap}>
@@ -18,8 +18,11 @@ const contactAreaInfo = props => (
           <i className="fa fa-map-marker" />
         </div>
         <div className={props.styles.contact_info_content}>
-          <h4>Location :</h4>
-          <p>77, seventh avenue, Road USA.</p>
+          <h4>Besøksadresse :</h4>
+          <p>
+            Oslo gate 42, <br />
+            1111 Oslo
+          </p>
         </div>
       </div>
       <div
@@ -29,9 +32,9 @@ const contactAreaInfo = props => (
           <i className="fa fa-phone" />
         </div>
         <div className={props.styles.contact_info_content}>
-          <h4>phone :</h4>
-          <p>+00 111 222 333 44</p>
-          <p>+00 111 222 333 44</p>
+          <h4>Telefon :</h4>
+          <p>+47 111 222 33</p>
+          <p>+47 222 333 44</p>
         </div>
       </div>
       <div className={props.styles.single_contact_info}>
@@ -39,12 +42,9 @@ const contactAreaInfo = props => (
           <i className="fa fa-envelope" />
         </div>
         <div className={props.styles.contact_info_content}>
-          <h4>mail :</h4>
+          <h4>Epost :</h4>
           <p>
-            <a href="#">yourmail@gmail.com</a>
-          </p>
-          <p>
-            <a href="#">info@example.com</a>
+            <a href="#">dinrestaurant@kodefant.no</a>
           </p>
         </div>
       </div>

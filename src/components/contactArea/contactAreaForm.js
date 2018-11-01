@@ -21,7 +21,7 @@ class ContactAreaForm extends Component {
                     this.props.styles.mb_20
                   }`}
                 >
-                  <input name="name" placeholder="Full Name" type="text" />
+                  <input name="name" placeholder="Fullt navn" type="text" />
                 </div>
               </div>
               <div className="col-lg-6">
@@ -32,7 +32,7 @@ class ContactAreaForm extends Component {
                 >
                   <input
                     name="email"
-                    placeholder="Email Address"
+                    placeholder="Epost-adresse"
                     type="email"
                   />
                 </div>
@@ -43,19 +43,19 @@ class ContactAreaForm extends Component {
                     this.props.styles.mb_20
                   }`}
                 >
-                  <input name="subject" placeholder="Subject" type="text" />
+                  <input name="emne" placeholder="Emne" type="text" />
                 </div>
               </div>
               <div className="col-lg-12">
                 <div className={this.props.styles.contact_form_style}>
-                  <textarea name="message" placeholder="Message" />
+                  <textarea name="message" placeholder="Beskjed" />
                   <button
                     className={`${this.props.styles.submit} ${
                       this.props.styles.btn_style
                     }`}
                     type="submit"
                   >
-                    SEND MESSAGE
+                    Send beskjed
                   </button>
                 </div>
               </div>

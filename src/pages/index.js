@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 
+import Testimonials from '../components/testimonials/testimonials'
 import PopularProducts from '../components/popularProducts/popularProducts'
 import BookTable from '../components/bookTable/bookTable'
 
@@ -15,21 +16,21 @@ const Slides = [
   {
     id: '1',
     index: 3,
-    background: slider1,
+    background: slider2,
     topHeader: 'Ønsk <span>velkommen</span>',
     bottomHeader: '<span>Apetittelig</span> førsteinntrykk',
     paragraph:
-      'En nettside kan være det første dine kommende spisegjester ser av restauranten din. Gjør det lett for dem å komme på besøk.',
-    buttonText: 'Frist med menyen',
+      'En nettside kan være det første dine kommende spisegjester ser av restauranten din. Gi dem gode grunner til å besøke.',
+    buttonText: 'Din meny på nett',
     buttonLink: '/menu',
   },
   {
     id: '2',
     index: 4,
-    background: slider2,
+    background: slider1,
     topHeader: 'Vis dine <span>verdier</span>',
-    bottomHeader: 'En <span>unik</span> opplevelse',
-    paragraph: 'Vis hva som skiller seg ut fra de andre.',
+    bottomHeader: 'Skap en <span>unik</span> opplevelse',
+    paragraph: 'Vis hva som skiller deg fra konkurrentene.',
     buttonText: 'Om din restaurant',
     buttonLink: '/about',
   },
@@ -43,6 +44,7 @@ const IndexPage = () => (
     <Slider slides={Slides} />
     <PopularProducts />
     <BookTable />
+    <Testimonials />
   </Layout>
 )
 

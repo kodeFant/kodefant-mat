@@ -21,12 +21,10 @@ const team = () => (
   <div className={`${styles.pt_100} ${styles.pb_70} ${styles.gray_bg}`}>
     <div className="container">
       <div className={`${styles.section_title} text-center ${styles.mb_50}`}>
-        <h2>Our Lovely team</h2>
+        <h2>Vis fram vinnerlaget</h2>
         <p>
-          {' '}
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim nostrud exercitation ullamco laboris nisi.
+          Restauranten din blir drevet fram av dyktige og dedikerte ansatte.
+          Fremhev dem og gi dem eierskap til det dere skaper sammen.
         </p>
       </div>
       <div className="row">{teamMembers}</div>

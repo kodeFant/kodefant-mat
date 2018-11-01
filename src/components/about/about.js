@@ -13,15 +13,14 @@ const About = () => (
             <h3>Hva gjør restauranten din spesiell? Beskriv dine verdier.</h3>
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                aliquet dolor libero, eget loved dost venenatis mauris finibus
-                dictum. Vestibulum quis elit eget neque porttitor no amet dolor
-                Proin pretium.
+                I en gate i din by finnes det en unik restaurant som ble startet
+                fordi de så behovet for god mat. Å lese om oppstarten, ideene og
+                kanskje noen morsomme fakta gir ekstra verdi for
+                kundeopplevelsen.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                aliquet dolor libero, eget loved dost venenatis mauris finibus
-                dictum.
+                Lager dere mat ut fra en bestemt kultur eller mattradisjon,
+                eller slik deres bestemor lagde det? Fortell om det!
               </p>
             </div>
           </div>
