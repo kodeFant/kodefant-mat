@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import foodMenuData, {
-  breakfast,
+  starter,
   lunch,
   dinner,
   dessert,
@@ -60,10 +60,10 @@ class foodMenu extends Component {
                   <h4>{item.name}</h4>
                 </div>
                 <div className={styles.menu_price}>
-                  <span>${item.price}</span>
+                  <span>Kr {item.price}</span>
                 </div>
               </div>
-              <p>Categories: {item.categories.join(', ')}</p>
+              <p>{item.categories.join(', ')}</p>
             </div>
           </div>
         </div>
@@ -102,11 +102,11 @@ class foodMenu extends Component {
               </a>
               <a
                 href="#"
-                id={breakfast}
+                id={starter}
                 onClick={this.selectMenuCategory}
-                className={this.activeCategory(breakfast)}
+                className={this.activeCategory(starter)}
               >
-                Frokost
+                Forrett
               </a>
               <a
                 href="#"
@@ -122,7 +122,7 @@ class foodMenu extends Component {
                 onClick={this.selectMenuCategory}
                 className={this.activeCategory(dinner)}
               >
-                Middag
+                Hovedrett
               </a>
               <a
                 href="#"

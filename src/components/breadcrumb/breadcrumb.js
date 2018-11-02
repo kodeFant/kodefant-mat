@@ -2,15 +2,13 @@ import React from 'react'
 import placeholderIMG from '../../images/banner/breath.jpg'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { Parallax } from 'react-parallax'
 
 const breadcrumb = props => (
-  <div
+  <Parallax
+    bgImage={props.background ? props.background : placeholderIMG}
+    strength={400}
     className="breadcrumb-area bg-img ptb-80"
-    style={
-      props.background
-        ? { backgroundImage: `url(${props.background})` }
-        : { backgroundImage: `url(${placeholderIMG})` }
-    }
   >
     <div className="container">
       <div className="breadcrumb-content text-center">
@@ -23,7 +21,7 @@ const breadcrumb = props => (
         </ul>
       </div>
     </div>
-  </div>
+  </Parallax>
 )
 
 breadcrumb.propTypes = {

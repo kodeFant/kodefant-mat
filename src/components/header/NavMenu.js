@@ -11,10 +11,10 @@ const NavMenu = props => (
   <nav className={`${props.mobile ? props.styles.mean_nav : null}`}>
     <ul className={`${props.mobile ? props.styles.menu_overflow : null}`}>
       <MenuItem name="Hjem" link="/" {...props} />
-      <MenuItem name="Meny" link="menu" {...props} />
-      <MenuItem name="Om" link="about" {...props} />
+      <MenuItem name="Meny" link="meny" {...props} />
+      <MenuItem name="Om" link="om" {...props} />
       {/* <MenuItem name="blog" link="blog" submenu={blogSubmenu} {...props} /> */}
-      <MenuItem name="Kontakt" link="contact" {...props} />
+      <MenuItem name="Kontakt" link="kontakt" {...props} />
     </ul>
   </nav>
 )

@@ -22,7 +22,7 @@ const Slides = [
     paragraph:
       'En nettside kan være det første dine kommende spisegjester ser av restauranten din. Gi dem gode grunner til å besøke.',
     buttonText: 'Din meny på nett',
-    buttonLink: '/menu',
+    buttonLink: '/meny',
   },
   {
     id: '2',
@@ -32,7 +32,7 @@ const Slides = [
     bottomHeader: 'Skap en <span>unik</span> opplevelse',
     paragraph: 'Vis hva som skiller deg fra konkurrentene.',
     buttonText: 'Om din restaurant',
-    buttonLink: '/about',
+    buttonLink: '/om',
   },
 ]
 /*********************

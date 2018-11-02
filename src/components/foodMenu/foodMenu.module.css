@@ -1,3 +1,7 @@
+.mb_30 {
+  composes: mb_30 from '../global-css/style.css';
+}
+
 .mb_50 {
   composes: mb_50 from '../global-css/style.css';
 }
@@ -74,7 +78,6 @@
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 2px;
-  text-transform: capitalize;
 }
 .menu_title h4 a:hover {
   color: #e54c2a;
