@@ -61,6 +61,7 @@
   border: 1px solid #f1f1f1;
   display: flex;
   padding: 15px;
+  transition: all 300ms;
 }
 .menu_product_content {
   margin-left: 25px;
@@ -94,6 +95,37 @@
 
 .menu_tab_wrap.mb_50 {
   margin-bottom: 30px;
+}
+
+.menu_appear {
+  opacity: 0.1;
+}
+.menu_active_appear {
+  transition: all 0.7s ease-in-out;
+  opacity: 1;
+}
+.menu_enter {
+  display: none;
+  opacity: 0;
+  display: none;
+}
+.menu_active_enter {
+  display: block;
+  transition: all 0.7s ease-in-out 0.3s;
+  opacity: 1;
+}
+.menu_done_enter {
+  opacity: 1;
+}
+.menu_exit {
+  opacity: 0;
+}
+.menu_active_exit {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.menu_done_exit {
+  display: none;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {

@@ -7,6 +7,7 @@ import foodMenuData, {
   dessert,
   drinks,
 } from './dummyData/foodMenuData.js'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import styles from './foodMenu.module.css'
 
@@ -28,6 +29,7 @@ class foodMenu extends Component {
     const selectedCategory = event.target.id
     this.setState({
       menuFilter: selectedCategory,
+      switch: true,
     })
   }
 
@@ -47,28 +49,53 @@ class foodMenu extends Component {
   }
 
   generateFoodMenuItems() {
-    return this.filteredFoodMenuItems().map(item => {
-      return (
-        <div key={item.id} className="col-lg-6">
-          <div className={`${styles.single_menu_product} ${styles.mb_30}`}>
-            <div className={styles.menu_product_img}>
-              <img alt="" src={item.image} />
-            </div>
-            <div className={styles.menu_product_content}>
-              <div className={styles.menu_title_price}>
-                <div className={styles.menu_title}>
-                  <h4>{item.name}</h4>
-                </div>
-                <div className={styles.menu_price}>
-                  <span>Kr {item.price}</span>
+    return (
+      <TransitionGroup className="row">
+        {this.filteredFoodMenuItems().map(item => {
+          if (this.state.switch) {
+            this.setState({ switch: false })
+            return null
+          }
+          return (
+            <CSSTransition
+              key={item.id}
+              timeout={1400}
+              classNames={{
+                appear: styles.menu_appear,
+                appearActive: styles.menu_active_appear,
+                enter: styles.menu_enter,
+                enterActive: styles.menu_active_enter,
+                enterDone: styles.menu_done_enter,
+                exit: styles.menu_exit,
+                exitActive: styles.menu_active_exit,
+                exitDone: styles.menu_done_exit,
+              }}
+            >
+              <div className="col-lg-6">
+                <div
+                  className={`${styles.single_menu_product} ${styles.mb_30}`}
+                >
+                  <div className={styles.menu_product_img}>
+                    <img alt="" src={item.image} />
+                  </div>
+                  <div className={styles.menu_product_content}>
+                    <div className={styles.menu_title_price}>
+                      <div className={styles.menu_title}>
+                        <h4>{item.name}</h4>
+                      </div>
+                      <div className={styles.menu_price}>
+                        <span>Kr {item.price}</span>
+                      </div>
+                    </div>
+                    <p>{item.categories.join(', ')}</p>
+                  </div>
                 </div>
               </div>
-              <p>{item.categories.join(', ')}</p>
-            </div>
-          </div>
-        </div>
-      )
-    })
+            </CSSTransition>
+          )
+        })}
+      </TransitionGroup>
+    )
   }
 
   render() {
@@ -144,7 +171,7 @@ class foodMenu extends Component {
           </div>
           <div className="tab-content jump">
             <div id="tab1" className="tab-pane active">
-              <div className="row">{this.generateFoodMenuItems()}</div>
+              {this.generateFoodMenuItems()}
             </div>
           </div>
         </div>
