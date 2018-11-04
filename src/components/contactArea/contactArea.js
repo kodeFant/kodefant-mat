@@ -14,7 +14,7 @@ class ContactArea extends Component {
             <div className="col-lg-8" style={{ display: 'flex' }}>
               <ContactAreaForm styles={styles} />
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4" style={{ display: 'flex' }}>
               <ContactAreaInfo styles={styles} />
             </div>
           </div>

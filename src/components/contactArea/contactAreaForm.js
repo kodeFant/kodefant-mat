@@ -2,53 +2,31 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
 import mailgun from '../mailgun/mailgun'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as yup from 'yup'
+import Recaptcha from 'react-recaptcha'
+
+const contactSchema = yup.object().shape({
+  name: yup.string().required('Navn er påkrevd'),
+  email: yup
+    .string()
+    .required('En epost-adresse er påkrevd')
+    .email('Oppgi en gyldig epost-adresse'),
+  subject: yup.string().required('Emnefelt er påkrevd'),
+  message: yup
+    .string()
+    .required('Vennligst legg igjen en beskjed før du sender'),
+  recaptcha: yup.string().required('Du må bekrefte at du ikke er en robot'),
+})
 
 class ContactAreaForm extends Component {
-  state = {
-    name: 'Lillo',
-    email: 'lars.lillo@gmail.com',
-    subject: 'Hey',
-    message: 'Haha',
-    nameValid: false,
-    emailValid: false,
-    subjectValid: false,
-    messageValid: false,
-    formValid: false,
+  componentDidMount() {
+    const script = document.createElement('script')
+    script.src = 'https://www.google.com/recaptcha/api.js'
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
   }
-
-  onChange = event => {
-    this.setState({ [event.target.name]: event.target.value })
-  }
-
-  sendForm = event => {
-    event.preventDefault()
-    axios({
-      method: 'post',
-      url: `${mailgun.baseUrl}/${mailgun.domain}/messages`,
-      auth: {
-        username: 'api',
-        password: mailgun.apiKey,
-      },
-      params: {
-        from: 'postmaster@mg.kodefant.no',
-        to: 'lillo@kodefant.no',
-        subject: this.state.subject,
-        text: `Fra ${this.state.name} (${this.state.email}): ${
-          this.state.message
-        }`,
-      },
-    }).then(
-      response => {
-        // eslint-disable-next-line no-console
-        console.log(response)
-      },
-      reject => {
-        // eslint-disable-next-line no-console
-        console.log(reject)
-      }
-    )
-  }
-
   render() {
     return (
       <div className={this.props.styles.contact_message_wrapper}>
@@ -60,77 +38,150 @@ class ContactAreaForm extends Component {
           Interessert i nettside for restauranten? Ta kontakt.
         </h4>
         <div className={this.props.styles.contact_message}>
-          <form id="contact-form">
-            <div className="row">
-              <div className="col-lg-6">
-                <div
-                  className={`${this.props.styles.contact_form_style} ${
-                    this.props.styles.mb_20
-                  }`}
-                >
-                  <input
-                    name="name"
-                    placeholder="Fullt navn"
-                    type="text"
-                    value={this.state.name}
-                    onChange={this.onChange}
-                    required
-                  />
+          <Formik
+            initialValues={{
+              email: '',
+              name: '',
+              subject: '',
+              message: '',
+              recaptcha: '',
+            }}
+            validationSchema={contactSchema}
+            onSubmit={values => {
+              axios({
+                method: 'post',
+                url: `${mailgun.baseUrl}/${mailgun.domain}/messages`,
+                auth: {
+                  username: 'api',
+                  password: mailgun.apiKey,
+                },
+                params: {
+                  from: 'postmaster@mg.kodefant.no',
+                  to: 'lillo@kodefant.no',
+                  subject: values.subject,
+                  text: `Fra ${values.name} (${values.email}): ${
+                    values.message
+                  }`,
+                },
+              }).then(
+                response => {
+                  // eslint-disable-next-line no-console
+                  console.log(response)
+                },
+                reject => {
+                  // eslint-disable-next-line no-console
+                  console.log(reject)
+                }
+              )
+            }}
+            render={({ isSubmitting, setFieldValue }) => (
+              <Form>
+                <div className="row">
+                  <div className="col-lg-6">
+                    <div
+                      className={`${this.props.styles.contact_form_style} ${
+                        this.props.styles.mb_20
+                      }`}
+                    >
+                      <Field
+                        type="name"
+                        name="name"
+                        placeholder="Ditt navn"
+                        disabled={isSubmitting}
+                      />
+                      <ErrorMessage name="name" component="div" />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div
+                      className={`${this.props.styles.contact_form_style} ${
+                        this.props.styles.mb_20
+                      }`}
+                    >
+                      <Field
+                        type="email"
+                        name="email"
+                        placeholder="Din e-post-adresse"
+                        disabled={isSubmitting}
+                      />
+                      <ErrorMessage name="email" component="div" />
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div
+                      className={`${this.props.styles.contact_form_style} ${
+                        this.props.styles.mb_20
+                      }`}
+                    >
+                      <Field
+                        type="subject"
+                        name="subject"
+                        placeholder="Emne"
+                        disabled={isSubmitting}
+                      />
+                      <ErrorMessage name="subject" component="div" />
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div
+                      className={`
+                      ${this.props.styles.contact_form_style}
+                      ${this.props.styles.mb_20}
+                      `}
+                    >
+                      <Field
+                        component="textarea"
+                        name="message"
+                        placeholder="Beskjed"
+                        disabled={isSubmitting}
+                      />
+                      <ErrorMessage name="message" component="div" />
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div className={this.props.styles.contact_form_style}>
+                      <Recaptcha
+                        sitekey="6LeucXEUAAAAAGF4rO1y4oh994BwHPThgTZkcs7N"
+                        render="explicit"
+                        theme="light"
+                        verifyCallback={response => {
+                          setFieldValue('recaptcha', response)
+                        }}
+                        onloadCallback={() => {
+                          // eslint-disable-next-line no-console
+                          console.log('done loading!')
+                        }}
+                      />
+                      <ErrorMessage name="recaptcha" component="div" />
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div className={this.props.styles.contact_form_style}>
+                      <button
+                        className={`${this.props.styles.submit} ${
+                          this.props.styles.btn_style
+                        }`}
+                        type="submit"
+                        disabled={isSubmitting}
+                      >
+                        {!isSubmitting ? 'Send beskjed' : ''}
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="col-lg-6">
-                <div
-                  className={`${this.props.styles.contact_form_style} ${
-                    this.props.styles.mb_20
-                  }`}
-                >
-                  <input
-                    name="email"
-                    placeholder="Epost-adresse"
-                    type="email"
-                    value={this.state.email}
-                    onChange={this.onChange}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div
-                  className={`${this.props.styles.contact_form_style} ${
-                    this.props.styles.mb_20
-                  }`}
-                >
-                  <input
-                    name="subject"
-                    placeholder="Emne"
-                    type="text"
-                    value={this.state.subject}
-                    onChange={this.onChange}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div className={this.props.styles.contact_form_style}>
-                  <textarea
-                    name="message"
-                    placeholder="Beskjed"
-                    value={this.state.message}
-                    onChange={this.onChange}
-                    required
-                  />
-                  <button
-                    className={`${this.props.styles.submit} ${
-                      this.props.styles.btn_style
-                    }`}
-                    onClick={this.sendForm}
-                  >
-                    Send beskjed
-                  </button>
-                </div>
-              </div>
-            </div>
-          </form>
+                {isSubmitting ? (
+                  <>
+                    <h3>Takk. Din beskjed er sendt</h3>
+                    <p>
+                      Takk for din interesse. Jeg svarer normalt innen en
+                      virkedag eller to. Ta gjerne en titt på{' '}
+                      <a href="https://www.kodefant.no">kodeFant.no</a>
+                    </p>
+                  </>
+                ) : null}
+              </Form>
+            )}
+          />
           <p className="form-message" />
         </div>
       </div>
