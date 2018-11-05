@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import axios from 'axios'
-import mailgun from '../mailgun/mailgun'
+import mg from '../mailgun/mg'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as yup from 'yup'
 import Recaptcha from 'react-recaptcha'
@@ -48,31 +47,19 @@ class ContactAreaForm extends Component {
             }}
             validationSchema={contactSchema}
             onSubmit={values => {
-              axios({
-                method: 'post',
-                url: `${mailgun.baseUrl}/${mailgun.domain}/messages`,
-                auth: {
-                  username: 'api',
-                  password: mailgun.apiKey,
-                },
-                params: {
-                  from: 'postmaster@mg.kodefant.no',
-                  to: 'lillo@kodefant.no',
+              mg.messages
+                .create('mg.kodefant.no', {
+                  from: `DinRestaurant-henvendelse <postmaster@mg.kodefant.no>`,
+                  to: ['lillo@kodefant.no'],
                   subject: values.subject,
-                  text: `Fra ${values.name} (${values.email}): ${
-                    values.message
-                  }`,
-                },
-              }).then(
-                response => {
-                  // eslint-disable-next-line no-console
-                  console.log(response)
-                },
-                reject => {
-                  // eslint-disable-next-line no-console
-                  console.log(reject)
-                }
-              )
+                  text: values.message,
+                })
+                .then((
+                  msg // eslint-disable-next-line no-console
+                ) => console.log(msg))
+                .catch((
+                  err // eslint-disable-next-line no-console
+                ) => console.log(err))
             }}
             render={({ isSubmitting, setFieldValue }) => (
               <Form>
